@@ -2,28 +2,30 @@ package arrays;
 
 import java.util.Scanner;
 
-public class Arrays {
+/**
+ *
+ * @author ANDRES
+ */
+public class Arrsys {
 
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
-        Scanner teclado = new Scanner(System.in);
-        int n, x[], suma = 0;
-
-        System.out.println("Cantidad de elementos:");
-        n = teclado.nextInt();
-        x = new int[n];
-
-        for (int i = 0; i < n; i++) {
-            System.out.println("x[" + i + "]");
-            x[i] = teclado.nextInt();
+        double suma = 0;
+        int num;
+        Scanner ent = new Scanner(System.in);
+        System.out.println("Cuantos numeros desea sumar?");
+        num = ent.nextInt();
+        double [] numeros; 
+        numeros = new double [num];
+        for (int i = 0; i < num; i++){
+            System.out.println("Ingrese el numero");
+            numeros[i] = ent.nextInt();
+            suma += numeros[i];
+        
         }
-        System.out.println("Elementos del Arreglo:");
-        for (int i = 0; i < n; i++) {
-            System.out.println("x[" + i + "]:" + x[i]);
-        }
-
-        for (int i = 0; i < n; i++) {
-            suma = x[i] + suma;
-        }
-        System.out.println("La suma es:" + suma);
+        System.out.println("La suma de los numeros es: "+ suma);
     }
+    
 }
